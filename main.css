@@ -1,0 +1,23 @@
+body{
+    background-color: #fefae0;
+}
+
+.container{
+    display: flex;
+    width: 1024px;
+    height:780px;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 80%;
+    background-color: #606c38;
+    padding: 25px 20px;
+    border-radius: 1em;
+    color: #ffffff;
+}
+
+form input{
+    margin-bottom: 1em;
+}
