@@ -1,15 +1,15 @@
 {
-  "name": "exerciciosass",
+  "name": "exercicio_less",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass source/main.scss build/main.css --watch",
+    "less": "less-watch-compiler ./src/styles ./build/styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.69.7"
+    "less": "^4.2.0"
   }
 }
