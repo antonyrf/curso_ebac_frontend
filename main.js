@@ -9,13 +9,17 @@ $(document).ready(function(){
     const profRepo = document.querySelector('#prof-repo');
     const profLink = document.querySelector('#prof-link')
 
-    $.ajax(endpoint).done(function(resposta){
-        profNome.innerText = resposta.name;
-        profUser.innerText = resposta.login;
-        profAvatar.src = resposta.avatar_url;
-        profFollowers.innerText = resposta.followers;
-        profFollowing.innerText = resposta.following;
-        profRepo.innerText = resposta.public_repos;
-        profLink.href = resposta.html_url;
-    })
+    fetch('https://api.github.com/users/antonyrf')
+        .then(function(resposta){
+            return resposta.json();
+        })
+        .then(function(json){
+            profNome.innerText = json.name;
+            profUser.innerText = json.login;
+            profAvatar.src = json.avatar_url;
+            profFollowers.innerText = json.followers;
+            profFollowing.innerText = json.following;
+            profRepo.innerText = json.public_repos;
+            profLink.href = json.html_url;
+        })
 })
